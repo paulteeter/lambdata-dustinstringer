@@ -7,7 +7,8 @@ A collection of datascience utility functions.
 ## Modules:
 - dustydata.wild_west
     - example: import on the module level
-        from dustydata import wild_west
+                            
+          from dustydata import wild_west
 
 ## Classes:
 - dustydata.wild_west.johnWayne(dataframe, check_null=boolean, check_data_types=boolean)
