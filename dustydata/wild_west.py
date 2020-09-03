@@ -80,3 +80,11 @@ class johnWayne:
         x, z = train_test_split(x, test_size=test_size,
                                 random_state=random_state)
         return x, y, z
+    
+
+class pocketWatch:
+    """
+    Class to handle time data
+    """
+
+    pass

@@ -11,7 +11,7 @@ jupyter = "*"
 pandas = "*"
 numpy = "*"
 sklearn = "*"
+pylint = "*"
 
 [requires]
 python_version = "3.8"
-

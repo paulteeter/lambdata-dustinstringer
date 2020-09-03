@@ -1,9 +1,11 @@
-from dustydata.wild_west import johnWayne
+"""This module is for testing functions."""
+
 import pandas as pd
 import numpy as np
-
+from dustydata.wild_west import johnWayne
 
 if __name__ == '__main__':
+
     df = pd.DataFrame({
         0: [1, 2.9, 3, 4, 5, 6, 7],
         1: ['a', 'a', 'a', 'a', 'a', 'a', 'a'],
