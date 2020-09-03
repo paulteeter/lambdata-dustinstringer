@@ -7,8 +7,9 @@ A collection of datascience utility functions.
 ## Available modules:
 i. wild_west (a module for data wrangling and feature engineering)
     
-   # Available Classes:
+   ### Available Classes:
    i. johnWayne <-- data wrangling class
-        # Available Modules:
-        i. cardinality_cutter()
-        i. tri_split()
+   
+   #### Available Modules:
+   i. cardinality_cutter()
+   i. tri_split()
