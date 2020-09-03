@@ -4,11 +4,12 @@ import numpy as np
 
 class johnWayne:
     
-    def __init__(self, dataframe):
+    def __init__(self, dataframe, check_null=True):
         self.dataframe = dataframe
+        self.check_null = check_null
         self.main()
         
-    def check_nulls(self):
+    def __check_nulls__(self):
         null_dictionary = {}
         for e, i in enumerate(self.dataframe.isnull().sum()):
             if i > 0:
@@ -16,7 +17,8 @@ class johnWayne:
         print(null_dictionary)
         
     def main(self):
-        self.check_nulls()
+        if self.check_null == True:
+            self.__check_nulls__()
 
 
 df = pd.DataFrame({0: ['g', 'g', 'g', 'y', 't', 'u', 'o'],
@@ -25,7 +27,7 @@ df = pd.DataFrame({0: ['g', 'g', 'g', 'y', 't', 'u', 'o'],
                     3: ['t', np.nan, 'f', 'f', 't', 'h', 'j'],
                     4: ['f', 'h', 'd', 'k', 'j', 'y', 'j']})
 
-jw = johnWayne(df)
+jw = johnWayne(df, False)
         
     
         
