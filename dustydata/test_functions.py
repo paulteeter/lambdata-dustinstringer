@@ -2,7 +2,7 @@
 
 import pandas as pd
 import numpy as np
-from dustydata.wild_west import johnWayne
+from dustydata.wild_west import JohnWayne
 
 if __name__ == '__main__':
 
@@ -13,7 +13,7 @@ if __name__ == '__main__':
         3: ['t', np.NaN, 'f', 'f', 't', 'h', 'j'],
         4: ['f', 'h', 'd', 'k', 'j', 'y', 'j']})
 
-    jw = johnWayne(df)
+    jw = JohnWayne(df)
     jw.cardinality_cutter(threshold=5)
     X_train, X_val, X_test = jw.tri_split(.25, .25)
     print(X_train)
