@@ -1,10 +1,9 @@
-# This is a data wrangling module:
-import pandas as pd
-import numpy as np
+"""This is a data wrangling/feature engineering module:"""
+
 from sklearn.model_selection import train_test_split
 
 
-class johnWayne:
+class JohnWayne:
     """
     Data Wrangling Class
 
@@ -37,14 +36,14 @@ class johnWayne:
         returns the sum of nulls in a column.
         """
         null_dictionary = {}
-        for e, i in enumerate(self.dataframe.isnull().sum()):
-            if i > 0:
-                null_dictionary[e] = i
+        for _e, _i in enumerate(self.dataframe.isnull().sum()):
+            if _i > 0:
+                null_dictionary[_e] = _i
         print("\n")
         print("Index Position: Null value sums\n")
         print(null_dictionary)
         print("---------------------------------")
-        
+
     def __check_data_types__(self):
         """
         Returns the datatypes of each series in a data frame.
@@ -74,17 +73,15 @@ class johnWayne:
         val_size = size of split in float value from 0.0 to 1.0
         test_size = size of split in float value from 0.0 to 1.0
         """
-        x, y = train_test_split(self.dataframe,
+        _x, _y = train_test_split(self.dataframe,
                                 test_size=val_size,
                                 random_state=random_state)
-        x, z = train_test_split(x, test_size=test_size,
+        _x, _z = train_test_split(_x, test_size=test_size,
                                 random_state=random_state)
-        return x, y, z
-    
+        return _x, _y, _z
 
-class pocketWatch:
-    """
-    Class to handle time data
-    """
 
-    pass
+# class PocketWatch:
+#     """
+#     Class to handle time data
+#     """
