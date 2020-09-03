@@ -1,4 +1,4 @@
-# This is a data wrangling class:
+# This is a data wrangling module:
 import pandas as pd 
 import numpy as np
 from sklearn.model_selection import train_test_split
@@ -73,9 +73,3 @@ class johnWayne:
         x, z = train_test_split(x, test_size=test_size, 
                                 random_state=random_state)
         return x, y, z
-
-df = pd.DataFrame({0: [1, 2.9, 3, 4, 5, 6, 7],
-                    1: ['a', 'a', 'a', 'a', 'a', 'a', 'a'],
-                    2: ['b', 'b', np.NaN, 'b', 'b', 'b', 'b'],
-                    3: ['t', np.NaN, 'f', 'f', 't', 'h', 'j'],
-                    4: ['f', 'h', 'd', 'k', 'j', 'y', 'j']})

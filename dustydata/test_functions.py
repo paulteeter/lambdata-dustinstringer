@@ -1,18 +1,15 @@
-from dustydata.ds_utils import cardinality_cutter
-from dustydata.ds_utils import tri_split
-from dustydata.ds_utils import train_test_split
-
+from dustydata.wild_west import johnWayne
 import pandas as pd
-df = pd.DataFrame({0: ['g', 'g', 'g', 'y', 't', 'u', 'o'],
+
+df = pd.DataFrame({0: [1, 2.9, 3, 4, 5, 6, 7],
                     1: ['a', 'a', 'a', 'a', 'a', 'a', 'a'],
-                    2: ['b', 'b', 'b', 'b', 'b', 'b', 'b'],
-                    3: ['t', 'f', 'f', 'f', 't', 'h', 'j'],
+                    2: ['b', 'b', np.NaN, 'b', 'b', 'b', 'b'],
+                    3: ['t', np.NaN, 'f', 'f', 't', 'h', 'j'],
                     4: ['f', 'h', 'd', 'k', 'j', 'y', 'j']})
-card_feats = cardinality_cutter(df, 4)
-print(card_feats)
 
-x, y, z = tri_split(df, .25, .25)
-print(x)
-print(y)
-print(z)
-
+jw = johnWayne(df)
+jw.cardinality_cutter(threshold=5)
+X_train, X_val, X_test = jw.tri_split(.25, .25)
+print(X_train)
+print(X_val)
+print(X_test)
