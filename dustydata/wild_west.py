@@ -1,6 +1,7 @@
 # This is a data wrangling class:
 import pandas as pd 
 import numpy as np
+from sklearn.model_selection import train_test_split
 
 class johnWayne:
     """
@@ -55,6 +56,23 @@ class johnWayne:
         card_cut = card[card <= threshold].index.tolist()
         return card_cut 
 
+    def tri_split(self, val_size, test_size, random_state=42):
+        """
+        Split data three ways:
+        train/val/test
+        
+        This function makes use of sklearns train_test_split.
+        
+        data = dataframe to split
+        val_size = size of split in float value from 0.0 to 1.0
+        test_size = size of split in float value from 0.0 to 1.0
+        """
+        x, y = train_test_split(self.dataframe, 
+                                test_size=val_size, 
+                                random_state=random_state)
+        x, z = train_test_split(x, test_size=test_size, 
+                                random_state=random_state)
+        return x, y, z
 
 df = pd.DataFrame({0: [1, 2.9, 3, 4, 5, 6, 7],
                     1: ['a', 'a', 'a', 'a', 'a', 'a', 'a'],
@@ -63,9 +81,5 @@ df = pd.DataFrame({0: [1, 2.9, 3, 4, 5, 6, 7],
                     4: ['f', 'h', 'd', 'k', 'j', 'y', 'j']})
 
 jw = johnWayne(df, False, False)
-print(jw.cardinality_cutter(threshold=5))
-        
-    
-        
-        
-
+x, y, z = jw.tri_split(.25, .25)
+print(x)
