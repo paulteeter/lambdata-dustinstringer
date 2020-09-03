@@ -73,12 +73,12 @@ class JohnWayne:
         val_size = size of split in float value from 0.0 to 1.0
         test_size = size of split in float value from 0.0 to 1.0
         """
-        _x, _y = train_test_split(self.dataframe,
+        _X, _Y = train_test_split(self.dataframe,
                                 test_size=val_size,
                                 random_state=random_state)
-        _x, _z = train_test_split(_x, test_size=test_size,
+        _X, _Z = train_test_split(_X, test_size=test_size,
                                 random_state=random_state)
-        return _x, _y, _z
+        return _X, _Y, _Z
 
 
 # class PocketWatch:
