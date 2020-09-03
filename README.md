@@ -6,8 +6,7 @@ A collection of datascience utility functions.
   
 ## Modules:
 - dustydata.wild_west
-
-        example: import on the module level
+    - example: import on the module level
         from dustydata import wild_west
 
 ## Classes:
