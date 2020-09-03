@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="lambdata-dustinstringer", # Replace with your own username
-    version="0.0.3",
+    version="0.0.4",
     author="Dustin Stringer",
     author_email="dustinstringer92@gmail.com",
     description="A small example package",
@@ -20,3 +20,6 @@ setuptools.setup(
     ],
     python_requires='>=3.6',
 )
+
+#  python3 setup.py sdist bdist_wheel
+#  twine upload --skip-existing  dist/*
