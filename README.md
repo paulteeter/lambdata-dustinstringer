@@ -5,7 +5,10 @@ A collection of datascience utility functions.
     pip install lambdata-dustinstringer
   
 ## Modules:
-- dustydata.wild_west <-- module for data wrangling and feature engineering
+- dustydata.wild_west
+
+        example: import on the module level
+        from dustydata import wild_west
 
 ## Classes:
 - dustydata.wild_west.johnWayne(dataframe, check_null=boolean, check_data_types=boolean)
