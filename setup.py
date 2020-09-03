@@ -1,3 +1,5 @@
+"""This module is for setting up the package for pypi."""
+
 import setuptools
 
 with open("README.md", "r") as fh:
