@@ -79,7 +79,3 @@ df = pd.DataFrame({0: [1, 2.9, 3, 4, 5, 6, 7],
                     2: ['b', 'b', np.NaN, 'b', 'b', 'b', 'b'],
                     3: ['t', np.NaN, 'f', 'f', 't', 'h', 'j'],
                     4: ['f', 'h', 'd', 'k', 'j', 'y', 'j']})
-
-jw = johnWayne(df, False, False)
-x, y, z = jw.tri_split(.25, .25)
-print(x)
