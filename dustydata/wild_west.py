@@ -40,13 +40,18 @@ class johnWayne:
         for e, i in enumerate(self.dataframe.isnull().sum()):
             if i > 0:
                 null_dictionary[e] = i
+        print("Index Position: Null value sums\n")
         print(null_dictionary)
-
+        print("---------------------------------\n")
+        
     def __check_data_types__(self):
         """
         Returns the datatypes of each series in a data frame.
         """
+        print("\n")
+        print("Data types of each series in the dataframe:\n")
         print(self.dataframe.dtypes)
+        print("-----------------------------------------------")
 
     def cardinality_cutter(self, threshold=50):
         """
