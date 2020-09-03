@@ -40,9 +40,10 @@ class johnWayne:
         for e, i in enumerate(self.dataframe.isnull().sum()):
             if i > 0:
                 null_dictionary[e] = i
+        print("\n")
         print("Index Position: Null value sums\n")
         print(null_dictionary)
-        print("---------------------------------\n")
+        print("---------------------------------")
         
     def __check_data_types__(self):
         """
