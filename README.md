@@ -4,6 +4,10 @@ A collection of datascience utility functions.
 ## Installation:
     pip install lambdata-dustinstringer
   
-## Usage:
-    from dustydata import ds_utils
-> ds_utils is where the utility functions are held.
+## Available modules:
+i. wild_west (a module for data wrangling and feature engineering)
+    # Available Slasses:
+    i. johnWayne <-- data wrangling class
+        # Available Modules:
+        i. cardinality_cutter()
+        i. tri_split()
