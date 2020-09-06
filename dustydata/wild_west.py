@@ -90,10 +90,6 @@ class JohnWayne:
 
 class SafeCracker:
     """Test function to see if import and installation worked....for now"""
-    # def __init__(self, goal_arr, curr_arr):
-    #     self.goal_arr = list(input("Enter a string of letters: ").lower())
-    #     self.curr_arr = [' '] * len(goal_arr)
-
     def main(self):
         """main function"""
         goal_arr = list(input("Enter a string of letters: ").lower())
