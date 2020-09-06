@@ -90,7 +90,9 @@ class JohnWayne:
 
 class SafeCracker:
     """Test function to see if import and installation worked....for now
-       This is not a perminent class, just for exploration and learning."""
+       This is not a perminent class, just for exploration and learning.
+       
+       This class is my take on the infinite monkey theorm"""
     def main(self):
         """main function"""
         goal_arr = list(input("Enter a string of letters: ").lower())
