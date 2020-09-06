@@ -1,5 +1,5 @@
 """This is a data wrangling/feature engineering module:"""
-
+import random
 from sklearn.model_selection import train_test_split
 
 
@@ -73,15 +73,51 @@ class JohnWayne:
         val_size = size of split in float value from 0.0 to 1.0
         test_size = size of split in float value from 0.0 to 1.0
         """
-        _X, _Y = train_test_split(self.dataframe,
-                                test_size=val_size,
-                                random_state=random_state)
-        _X, _Z = train_test_split(_X, test_size=test_size,
-                                random_state=random_state)
-        return _X, _Y, _Z
+        train, val = train_test_split(
+            self.dataframe,
+            test_size=val_size,
+            random_state=random_state)
+        val, test = train_test_split(
+            val, test_size=test_size,
+            random_state=random_state)
+        return train, val, test
 
 
 # class PocketWatch:
 #     """
 #     Class to handle time data
 #     """
+
+
+class SafeCracker:
+    """Test function to see if import and installation worked....for now"""
+    def __init__(self):
+        pass
+
+    def main(self):
+        """main function"""
+        goal_arr = list(input("Enter a string of letters: ").lower())
+        curr_arr = [' '] * len(goal_arr)
+        while curr_arr != goal_arr:
+            self.compare_arrays(
+                goal_arr,
+                guess_arr=self.generate_array(len(goal_arr)),
+                curr_arr=curr_arr)
+            print(''.join(curr_arr))
+
+    @staticmethod
+    def generate_array(length) -> int:
+        """Generate Random String of a specific length"""
+        alphabet = 'abcdefghijklmnopqrstuvwxyz '
+        res = []
+        for _ in range(length):
+            res.append(alphabet[random.randrange(27)])
+        return res
+
+    @staticmethod
+    def compare_arrays(goal_arr, guess_arr, curr_arr):
+        """Compare and updated array"""
+        for i, _ in enumerate(goal_arr):
+            if goal_arr[i] == guess_arr[i]:
+                curr_arr.__setitem__(i, guess_arr[i])
+        return curr_arr
