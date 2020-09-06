@@ -89,7 +89,8 @@ class JohnWayne:
 
 
 class SafeCracker:
-    """Test function to see if import and installation worked....for now"""
+    """Test function to see if import and installation worked....for now
+       This is not a perminent class, just for exploration and learning."""
     def main(self):
         """main function"""
         goal_arr = list(input("Enter a string of letters: ").lower())
