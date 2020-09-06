@@ -68,7 +68,6 @@ class JohnWayne:
         train/val/test
 
         This function makes use of sklearns train_test_split.
-
         data = dataframe to split
         val_size = size of split in float value from 0.0 to 1.0
         test_size = size of split in float value from 0.0 to 1.0
@@ -91,8 +90,9 @@ class JohnWayne:
 
 class SafeCracker:
     """Test function to see if import and installation worked....for now"""
-    def __init__(self):
-        pass
+    def __init__(self, goal_arr, curr_arr):
+        self.goal_arr = list(input("Enter a string of letters: ").lower())
+        self.curr_arr = [' '] * len(goal_arr)
 
     def main(self):
         """main function"""
@@ -105,8 +105,7 @@ class SafeCracker:
                 curr_arr=curr_arr)
             print(''.join(curr_arr))
 
-    @staticmethod
-    def generate_array(length) -> int:
+    def generate_array(self, length) -> int:
         """Generate Random String of a specific length"""
         alphabet = 'abcdefghijklmnopqrstuvwxyz '
         res = []
@@ -114,8 +113,7 @@ class SafeCracker:
             res.append(alphabet[random.randrange(27)])
         return res
 
-    @staticmethod
-    def compare_arrays(goal_arr, guess_arr, curr_arr):
+    def compare_arrays(self, goal_arr, guess_arr, curr_arr):
         """Compare and updated array"""
         for i, _ in enumerate(goal_arr):
             if goal_arr[i] == guess_arr[i]:
